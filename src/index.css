@@ -1,0 +1,24 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-shape {
+    position: relative;
+    overflow: hidden;
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+.custom-shape::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,0,150,0.5), transparent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
