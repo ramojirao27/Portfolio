@@ -3,6 +3,7 @@ import React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'; // Import icons
 import { motion } from 'framer-motion'; // Import Framer Motion
 import programmer from '../assets/programmers.png';
+import resume from "../assets/resume.pdf"
 
 const Hero = () => {
   return (
@@ -26,7 +27,7 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }} 
           transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
         >
-          I am <span className='text-orange-250'>Ramoji Rao</span>, a <span className='text-orange-250'>full-stack web developer</span> with a passion for creating interactive and responsive web applications. Let’s build something great together!
+          I am <span className='text-orange-500'>Ramoji Rao</span>, a <span className='text-orange-250'>full-stack web developer</span> with a passion for creating interactive and responsive web applications. Let’s build something great together!
         </motion.p>
 
         {/* Social Icons with Hover Effect and Animation */}
@@ -67,6 +68,34 @@ const Hero = () => {
           >
             <FaTwitter size={32} />
           </motion.a>
+          {/* <motion.a 
+  href={resume}
+  target="_blank"
+  rel="noopener noreferrer"
+  initial={{ opacity: 0, x: -25 }} 
+  animate={{ opacity: 1, x: 0 }} 
+  transition={{ duration: 0.4, delay: 0.6, ease: 'easeOut' }}
+  whileHover={{ scale: 1.05 }}
+>
+  <button className="bg-orange-500 text-white font-semibold py-3 px-6 rounded-sm shadow-lg hover:shadow-xl hover:bg-orange-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
+    Download My Resume
+  </button>
+</motion.a> */}
+
+                    
+          <motion.a href={resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            
+            initial={{ opacity: 0, x: -25 }} 
+            animate={{ opacity: 1, x: 0 }} 
+            transition={{ duration: 0.4, delay: 0.6, ease: 'easeOut' }}
+            whileHover={{ scale: 1.0 }} >
+      <button className="bg-orange-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-700 transition duration-300 ease-in-out">
+    Download My Resume
+      </button>
+</motion.a>
+
         </div>
       </div>
 
